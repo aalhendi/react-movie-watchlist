@@ -12,6 +12,10 @@ class MovieStore {
     this.movies.find((movie) => movieId === movie.id).watched =
       !this.movies.find((movie) => movieId === movie.id).watched;
   };
+
+  deleteMovie = (movieId) => {
+    this.movies = this.movies.filter((movie) => movie.id !== movieId);
+  };
 }
 const movieStore = new MovieStore();
 export default movieStore;
