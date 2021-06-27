@@ -7,9 +7,7 @@ function App() {
   return (
     <div>
       <AddMovie />
-      <h1>Watch List</h1>
       <MoviesList />
-      <h1>Watched Movies</h1>
       <MoviesListWatched />
     </div>
   );
