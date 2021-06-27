@@ -5,7 +5,7 @@ import { observer } from "mobx-react";
 const MoviesList = () => {
   const movieList = movieStore.movies
     .filter((movie) => movie.watched === false)
-    .map((movie) => <MovieItem movie={movie} />);
+    .map((movie) => <MovieItem movie={movie} key={movie.id} />);
   return <div>{movieList}</div>;
 };
 
