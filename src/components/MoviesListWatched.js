@@ -18,7 +18,10 @@ const MoviesListWatched = () => {
   return (
     <div>
       <h1>
-        Watched List {`${filteredMovieList.length} out of ${movieList.length}`}
+        Watched List{" "}
+        {filteredMovieList.length === movieList.length
+          ? `${filteredMovieList.length}`
+          : `${filteredMovieList.length} out of ${movieList.length}`}
       </h1>
       <SearchBar setQuery={setQuery} />
       {filteredMovieList.length === 0 ? (
