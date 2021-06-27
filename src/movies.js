@@ -17,7 +17,7 @@ const movies = [
   {
     id: 3,
     name: "Example4",
-    watched: false,
+    watched: true,
   },
 ];
 
