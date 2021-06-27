@@ -6,6 +6,12 @@ class MovieStore {
   constructor() {
     makeAutoObservable(this);
   }
+
+  // TODO: refactor
+  changeWatched = (movieId) => {
+    this.movies.find((movie) => movieId === movie.id).watched =
+      !this.movies.find((movie) => movieId === movie.id).watched;
+  };
 }
 const movieStore = new MovieStore();
 export default movieStore;

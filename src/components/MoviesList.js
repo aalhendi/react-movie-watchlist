@@ -1,4 +1,3 @@
-import React from "react";
 import MovieItem from "./MovieItem";
 import movieStore from "../stores/movieStore";
 import { observer } from "mobx-react";
