@@ -1,10 +1,13 @@
 import React from "react";
-import movies from "../movies";
 import MovieItem from "./MovieItem";
+import movieStore from "../stores/movieStore";
+import { observer } from "mobx-react";
 
 const MoviesList = () => {
-  const movieList = movies.map((movie) => <MovieItem movie={movie} />);
+  const movieList = movieStore.movies.map((movie) => (
+    <MovieItem movie={movie} />
+  ));
   return <div>{movieList}</div>;
 };
 
-export default MoviesList;
+export default observer(MoviesList);
