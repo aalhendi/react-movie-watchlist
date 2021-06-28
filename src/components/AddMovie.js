@@ -15,15 +15,16 @@ const AddMovie = () => {
   };
 
   return (
-    <div>
+    <div className="m-3">
       <form onSubmit={handleSubmit}>
         <input
           placeholder="movie name"
           onChange={handleChange}
           name="name"
           type="text"
+          className="form-control mb-2"
         />
-        <button type="submit">add</button>
+        <button className="btn btn-outline-success btn-sm">add</button>
       </form>
     </div>
   );

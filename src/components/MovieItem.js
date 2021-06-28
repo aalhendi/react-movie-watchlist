@@ -9,12 +9,20 @@ const MovieItem = (props) => {
     movieStore.deleteMovie(props.movie.id);
   };
   return (
-    <div>
-      <h1>{props.movie.name}</h1>
-      <button onClick={handleWatchButton}>
+    <div className="besideEachOther">
+      <h5>{props.movie.name}</h5>
+      <button
+        onClick={handleWatchButton}
+        className="btn btn-outline-success btn-sm ms-2"
+      >
         {props.movie.watched ? "Unwatch" : "Watch"}
       </button>
-      <button onClick={handleDeleteButton}>Delete</button>
+      <button
+        onClick={handleDeleteButton}
+        className="btn btn-outline-danger btn-sm ms-2"
+      >
+        Delete
+      </button>
     </div>
   );
 };

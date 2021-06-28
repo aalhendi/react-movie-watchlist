@@ -1,14 +1,17 @@
 import "./App.css";
 import AddMovie from "./components/AddMovie";
 import MoviesList from "./components/MoviesList";
-import MoviesListWatched from "./components/MoviesListWatched";
 
 function App() {
   return (
-    <div>
+    <div className="flex-container row">
       <AddMovie />
-      <MoviesList />
-      <MoviesListWatched />
+      <div className="flex-child">
+        <MoviesList className="flex-child" isWatched={false} />
+      </div>
+      <div className="flex-child">
+        <MoviesList className="flex-child" isWatched={true} />
+      </div>
     </div>
   );
 }
